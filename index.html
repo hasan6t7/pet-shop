@@ -21,6 +21,32 @@
 
 <!-- style  -->
 <style>
+    @layer utilities {
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(3deg);
+            }
+
+            50% {
+                transform: rotate(-3deg);
+            }
+
+            75% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .animate-wiggle {
+            animation: wiggle 0.4s ease-in-out infinite;
+        }
+    }
+
     .sora-font {
         font-family: "Sora", serif;
     }
@@ -81,7 +107,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <a class="px-8 py-3 cursor-pointer border border-pet-1 rounded-lg hover:bg-[#FFDC2680]">Login</a>
                     <a
-                        class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680]">Register</a>
+                        class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680] ">Register</a>
                 </div>
             </div>
 
@@ -100,7 +126,7 @@
                     <p class="mb-5">Discover a world of treats, toys, and essentials handpicked for <br> your furry
                         friends. Shop now and make tails wag with joy!</p>
                     <button
-                        class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680] mb-32 lg:mb-96">Find
+                        class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680] mb-32 lg:mb-96 transition-transform transform hover:scale-105 animate-wiggle">Find
                         a Pet</button>
 
                 </div>
@@ -360,7 +386,8 @@
 
         <!-- News Section  -->
         <section>
-            <div class="bg-[#FFF9F4] px-8  lg:h-auto rounded-3xl relative top-72 lg:top-60  p-6 mx-6 flex flex-col lg:flex-row justify-around items-center border border-pet-1">
+            <div
+                class="bg-[#FFF9F4] px-8  lg:h-auto rounded-3xl relative top-72 lg:top-60  p-6 mx-6 flex flex-col lg:flex-row justify-around items-center border border-pet-1">
                 <div>
                     <img src="./assets/cute-pet-mid.png" alt="">
                 </div>
@@ -369,7 +396,8 @@
                     <p class=" text-lg ">Exclusive training tips, ticks, product deals and more.</p>
                     <input class="text-black p-6 rounded-lg w-full" type="text" placeholder="Enter email...">
                     <div>
-                        <button class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680]">Subscribe</button>
+                        <button
+                            class="px-8 py-3 cursor-pointer border-none bg-pet-1 rounded-lg hover:bg-[#FFDC2680]">Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -380,7 +408,7 @@
 
     <!-- Footer Start  -->
     <footer class="bg-[#FFDC2680] pt-[400px] pb-[100px] max-w-[1600px] mx-auto ">
-        
+
         <div class="max-w-[1320px] mx-auto flex flex-col lg:flex-row gap-6 justify-between pl-6 lg:pl-0">
             <div>
                 <div class="flex items-center gap-4 mb-4">
